@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Production de Jus de Pommes</title>
+    <style>
+        /* Style général de la page */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%);
+            min-height: 100vh;
+        }
+
+        /* En-tête */
+        header {
+            background-color: #d63031;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        /* Conteneur principal */
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+
+        /* Menu des onglets */
+        .tabs {
+            display: flex;
+            background-color: #e17055;
+            overflow-x: auto;
+        }
+
+        .tab-button {
+            flex: 1;
+            padding: 15px 20px;
+            background-color: #e17055;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+            min-width: 150px;
+        }
+
+        .tab-button:hover {
+            background-color: #d63031;
+        }
+
+        .tab-button.active {
+            background-color: #74b816;
+            font-weight: bold;
+        }
+
+        /* Contenu des onglets */
+        .tab-content {
+            display: none;
+            padding: 40px;
+            animation: fadeIn 0.5s;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Titre de l'étape */
+        .tab-content h2 {
+            color: #d63031;
+            border-bottom: 3px solid #74b816;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* Texte */
+        .tab-content p {
+            line-height: 1.8;
+            color: #333;
+            font-size: 16px;
+        }
+
+        /* Images */
+        .tab-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        /* Pied de page */
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #d63031;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🍎 Notre Jus de Pommes 🍏</h1>
+        <p>Du verger à la bouteille - Découvrez notre processus de fabrication</p>
+    </header>
+
+    <div class="container">
+        <!-- Menu des onglets -->
+        <div class="tabs">
+            <button class="tab-button active" onclick="openTab('etape1')">Étape 1 : Récolte</button>
+            <button class="tab-button" onclick="openTab('etape2')">Étape 2 : Lavage</button>
+            <button class="tab-button" onclick="openTab('etape3')">Étape 3 : Pressage</button>
+            <button class="tab-button" onclick="openTab('etape4')">Étape 4 : Filtration</button>
+            <button class="tab-button" onclick="openTab('etape5')">Étape 5 : Mise en bouteille</button>
+        </div>
+
+        <!-- Contenu Étape 1 -->
+        <div id="etape1" class="tab-content active">
+            <h2>Étape 1 : La Récolte des Pommes</h2>
+            <p><strong>Élève responsable :</strong> [Nom de l'élève]</p>
+            <p>
+                Décrivez ici la récolte des pommes : comment sont-elles cueillies ? 
+                À quelle période de l'année ? Quelles variétés de pommes utilisez-vous ?
+            </p>
+            <img src="https://via.placeholder.com/600x400/74b816/ffffff?text=Photo+de+la+Récolte" alt="Récolte des pommes">
+            <p>
+                Ajoutez plus de détails, d'anecdotes ou d'informations intéressantes 
+                sur cette première étape importante.
+            </p>
+        </div>
+
+        <!-- Contenu Étape 2 -->
+        <div id="etape2" class="tab-content">
+            <h2>Étape 2 : Le Lavage des Pommes</h2>
+            <p><strong>Élève responsable :</strong> [Nom de l'élève]</p>
+            <p>
+                Expliquez comment les pommes sont lavées pour enlever les impuretés, 
+                la terre et les résidus. Pourquoi cette étape est-elle importante ?
+            </p>
+            <img src="https://via.placeholder.com/600x400/fdcb6e/ffffff?text=Photo+du+Lavage" alt="Lavage des pommes">
+            <p>
+                Ajoutez des informations sur les techniques de lavage utilisées.
+            </p>
+        </div>
+
+        <!-- Contenu Étape 3 -->
+        <div id="etape3" class="tab-content">
+            <h2>Étape 3 : Le Pressage</h2>
+            <p><strong>Élève responsable :</strong> [Nom de l'élève]</p>
+            <p>
+                Décrivez comment les pommes sont pressées pour extraire le jus. 
+                Quel type de presse utilisez-vous ? Combien de jus obtient-on à partir de pommes ?
+            </p>
+            <img src="https://via.placeholder.com/600x400/e17055/ffffff?text=Photo+du+Pressage" alt="Pressage des pommes">
+            <p>
+                Partagez des détails techniques ou des observations intéressantes.
+            </p>
+        </div>
+
+        <!-- Contenu Étape 4 -->
+        <div id="etape4" class="tab-content">
+            <h2>Étape 4 : La Filtration</h2>
+            <p><strong>Élève responsable :</strong> [Nom de l'élève]</p>
+            <p>
+                Expliquez le processus de filtration du jus pour le rendre clair et agréable. 
+                Quels sont les résidus enlevés ?
+            </p>
+            <img src="https://via.placeholder.com/600x400/74b816/ffffff?text=Photo+de+la+Filtration" alt="Filtration du jus">
+            <p>
+                Ajoutez des informations sur l'importance de cette étape pour la qualité.
+            </p>
+        </div>
+
+        <!-- Contenu Étape 5 -->
+        <div id="etape5" class="tab-content">
+            <h2>Étape 5 : La Mise en Bouteille</h2>
+            <p><strong>Élève responsable :</strong> [Nom de l'élève]</p>
+            <p>
+                Décrivez la dernière étape : comment le jus est-il mis en bouteille ? 
+                Comment sont fabriquées vos étiquettes ? Quelles informations y figurent ?
+            </p>
+            <img src="https://via.placeholder.com/600x400/d63031/ffffff?text=Photo+Mise+en+Bouteille" alt="Mise en bouteille">
+            <p>
+                Partagez le résultat final et votre fierté d'avoir créé ce produit !
+            </p>
+        </div>
+    </div>
+
+    <footer>
+        <p>Projet réalisé par la classe de 4ème - 2024/2025</p>
+    </footer>
+
+    <script>
+        // Fonction pour changer d'onglet
+        function openTab(tabName) {
+            // Cache tous les contenus
+            var contents = document.getElementsByClassName('tab-content');
+            for (var i = 0; i < contents.length; i++) {
+                contents[i].classList.remove('active');
+            }
+            
+            // Désactive tous les boutons
+            var buttons = document.getElementsByClassName('tab-button');
+            for (var i = 0; i < buttons.length; i++) {
+                buttons[i].classList.remove('active');
+            }
+            
+            // Affiche l'onglet sélectionné
+            document.getElementById(tabName).classList.add('active');
+            
+            // Active le bouton cliqué
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>
